@@ -1,4 +1,91 @@
 /* Write your global styles here, in PostCSS syntax */
+@import url('https://fonts.googleapis.com/css2?family=Assistant&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Basic site style */
+h1,
+.h1 {
+    @apply text-5xl f-light;
+    letter-spacing: -1.5px;
+}
+
+h2,
+.h2 {
+    @apply text-4xl f-light;
+    letter-spacing: -0.5px;
+}
+
+h3,
+.h3 {
+    @apply text-3xl f-regular;
+    letter-spacing: 0px;
+}
+
+h4,
+.h4 {
+    @apply text-2xl f-regular;
+    letter-spacing: 0.25px;
+}
+
+h5,
+.h5 {
+    @apply text-xl f-regular;
+    letter-spacing: 0px;
+}
+
+h6,
+.h6 {
+    @apply text-base f-medium;
+    letter-spacing: 0.15px;
+}
+
+.body-1 {
+    @apply text-base;
+    letter-spacing: 0.5px;
+}
+
+.body-2 {
+    @apply text-sm;
+    letter-spacing: 0.25px;
+}
+
+.button {
+    letter-spacing: 0.0892857143em;
+}
+
+/* Fonts */
+html {
+    @apply f-regular;
+    font-family: Assistant, sans-serif;
+}
+
+.f-extralight {
+    font-weight: 600;
+}
+
+.f-light {
+    font-weight: 300;
+}
+
+.f-regular {
+    font-weight: 400;
+}
+
+.f-medium {
+    font-weight: 500;
+}
+
+.f-semibold {
+    font-weight: 600;
+}
+
+.f-bold {
+    font-weight: 700;
+}
+
+.f-extrabold {
+    font-weight: 800;
+}
