@@ -7,7 +7,7 @@
 	<Navbar />
 </header>
 
-<main>
+<main class="pt-5">
 	<slot />
 </main>
 

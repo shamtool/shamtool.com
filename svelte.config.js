@@ -15,7 +15,19 @@ const config = {
 		adapter: adapter(),
 
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte'
+		target: '#svelte',
+
+		vite: {
+			ssr: {
+				// !IMPORTANT so the icon data can be imported (as JSON)
+				noExternal: ["svelte-hero-icons"],
+			},
+
+			// no import waterfalls in development
+			optimizeDeps: {
+				include: ["svelte-hero-icons"],
+			},
+		},
 	}
 };
 
