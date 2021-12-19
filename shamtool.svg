@@ -2,38 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   width="941.32318"
+   height="265.90985"
    viewBox="0 0 941.32318 265.90985"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
-   sodipodi:docname="shamtool.svg"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview7"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:document-units="px"
-     showgrid="false"
-     inkscape:zoom="0.93470678"
-     inkscape:cx="540.81131"
-     inkscape:cy="144.43032"
-     inkscape:window-width="1482"
-     inkscape:window-height="1020"
-     inkscape:window-x="2422"
-     inkscape:window-y="38"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="layer1"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
   <defs
      id="defs2">
     <rect
@@ -104,8 +79,6 @@
     </g>
   </defs>
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
      id="layer1"
      style="display:inline"
      transform="translate(-423.28018,-460.26718)">
@@ -115,7 +88,6 @@
        x="419.10165"
        y="717.16315"
        id="text1067"><tspan
-         sodipodi:role="line"
          id="tspan1065"
          x="419.10165"
          y="717.16315"
@@ -134,7 +106,6 @@
        x="419.10165"
        y="717.16315"
        id="text11857"><tspan
-         sodipodi:role="line"
          id="tspan11855"
          x="419.10165"
          y="717.16315"
@@ -145,7 +116,6 @@
        x="959.86798"
        y="722.91302"
        id="text11857-3"><tspan
-         sodipodi:role="line"
          id="tspan11855-8"
          x="959.86798"
          y="722.91302"
@@ -205,10 +175,4 @@
          id="path17649" />
     </g>
   </g>
-
-  <defs>
-      <style type="text/css">
-         @import url('http://fonts.cdnfonts.com/css/soopafresh');
-      </style>
-   </defs>
 </svg>
