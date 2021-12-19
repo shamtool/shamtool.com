@@ -9,37 +9,37 @@
 /* Basic site style */
 h1,
 .h1 {
-    @apply text-5xl f-light;
+    @apply text-5xl f-light mb-3;
     letter-spacing: -1.5px;
 }
 
 h2,
 .h2 {
-    @apply text-4xl f-light;
+    @apply text-4xl f-light mb-3;
     letter-spacing: -0.5px;
 }
 
 h3,
 .h3 {
-    @apply text-3xl f-regular;
+    @apply text-3xl f-regular mb-3;
     letter-spacing: 0px;
 }
 
 h4,
 .h4 {
-    @apply text-2xl f-regular;
+    @apply text-2xl f-regular mb-3;
     letter-spacing: 0.25px;
 }
 
 h5,
 .h5 {
-    @apply text-xl f-regular;
+    @apply text-xl f-regular mb-3;
     letter-spacing: 0px;
 }
 
 h6,
 .h6 {
-    @apply text-base f-medium;
+    @apply text-base f-medium mb-3;
     letter-spacing: 0.15px;
 }
 
@@ -55,6 +55,14 @@ h6,
 
 .button {
     letter-spacing: 0.0892857143em;
+}
+
+.link {
+    @apply text-yellow-600;
+}
+
+.link:hover {
+    @apply text-yellow-500 underline;
 }
 
 /* Fonts */
