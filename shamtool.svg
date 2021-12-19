@@ -9,6 +9,11 @@
    id="svg5"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <defs>
+    <style type="text/css">
+       @import url('http://fonts.cdnfonts.com/css/soopafresh');
+    </style>
+  </defs>
   <defs
      id="defs2">
     <rect
