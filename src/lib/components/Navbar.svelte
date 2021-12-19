@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { base } from '$app/paths';
 	import { Icon, Search } from 'svelte-hero-icons';
 	import { clickOutside } from 'svelte-use-click-outside';
 	import { slide } from 'svelte/transition';
@@ -7,10 +8,10 @@
 	import HamburgerButton from './HamburgerButton.svelte';
 
 	const navigation = [
-		{ name: 'Home', href: '/' },
-		{ name: 'Categories', href: '/categories' },
-		{ name: 'Divinity', href: '/divinity' },
-		{ name: 'Spiritual', href: '/spiritual' }
+		{ name: 'Home', path: '/' },
+		{ name: 'Categories', path: '/categories' },
+		{ name: 'Divinity', path: '/divinity' },
+		{ name: 'Spiritual', path: '/spiritual' }
 	];
 
 	/**
@@ -29,20 +30,20 @@
 			<div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
 				<div class="flex-shrink-0 flex items-center">
 					<a
-							href="/"
+							href="{base}/"
 							class="text-white block px-3 py-2 rounded-md text-base font-medium"
 							aria-current="page">
 					<!-- Compact -->
 					<!-- TODO: design compact logo? -->
 					<img
 						class="block lg:hidden h-8 w-auto"
-						src="shamtool.svg"
+						src="{base}/shamtool.svg"
 						alt="ShamTool"
 					/>
 					<!-- Full -->
 					<img
 						class="hidden lg:block h-8 w-auto"
-						src="shamtool.svg"
+						src="{base}/shamtool.svg"
 						alt="ShamTool"
 					/>
 				</a>
@@ -51,16 +52,16 @@
 				-->
 				<div class="hidden sm:flex sm:ml-6">
 					<div class="flex space-x-4 m-auto">
-						{#each navigation as { name, href }}
-							{#if $page.path === href}
+						{#each navigation as { name, path }}
+							{#if $page.path === path}
 								<a
-									href="."
+									href={base}{path}
 									class="bg-primary-lighter text-white px-3 py-2 rounded-md text-sm font-medium"
 									aria-current="page">{name}</a
 								>
 							{:else}
 								<a
-									{href}
+									href={base}{path}
 									class="text-gray-300 hover:bg-primary-lighter hover:text-white px-3 py-2 rounded-md text-sm font-medium"
 									>{name}</a
 								>
@@ -87,16 +88,16 @@
 	{#if isMobileOpen}
 		<div class="sm:hidden" id="mobile-menu" transition:slide>
 			<div class="px-2 pt-2 pb-3 space-y-1">
-				{#each navigation as { name, href }}
-					{#if $page.path === href}
+				{#each navigation as { name, path }}
+					{#if $page.path === path}
 						<a
-							{href}
+							href={base}{path}
 							class="bg-primary-lighter text-white block px-3 py-2 rounded-md text-base font-medium"
 							aria-current="page">{name}</a
 						>
 					{:else}
 						<a
-							{href}
+							href={base}{path}
 							class="text-gray-300 hover:bg-primary-lighter hover:text-white block px-3 py-2 rounded-md text-base font-medium"
 							>{name}</a
 						>

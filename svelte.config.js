@@ -1,5 +1,7 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
+
+const isGhPages = process.env.TO_GITHUB === "true";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -12,7 +14,11 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			pages: isGhPages ? 'build-gh' : 'build',
+			assets: isGhPages ? 'build-gh' : 'build',
+			fallback: null
+		}),
 
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
@@ -27,6 +33,11 @@ const config = {
 			optimizeDeps: {
 				include: ["svelte-hero-icons"],
 			},
+		},
+
+		paths: {
+			// Deployment to GH-pages
+			base: isGhPages ? '/shamtool.com' : '',
 		},
 	}
 };
