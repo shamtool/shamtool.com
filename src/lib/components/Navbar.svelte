@@ -30,38 +30,34 @@
 			<div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
 				<div class="flex-shrink-0 flex items-center">
 					<a
-							href="{base}/"
-							class="text-white block px-3 py-2 rounded-md text-base font-medium"
-							aria-current="page">
-					<!-- Compact -->
-					<!-- TODO: design compact logo? -->
-					<img
-						class="block lg:hidden h-8 w-auto"
-						src="{base}/shamtool.svg"
-						alt="ShamTool"
-					/>
-					<!-- Full -->
-					<img
-						class="hidden lg:block h-8 w-auto"
-						src="{base}/shamtool.svg"
-						alt="ShamTool"
-					/>
-				</a>
-				</div><!--div
-				class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-				-->
+						href="{base}/"
+						class="text-white block px-3 py-2 rounded-md text-base font-medium"
+						aria-current="page"
+					>
+						<object
+							class="flex h-8 w-auto"
+							style="pointer-events: none"
+							data="{base}/shamtool.svg"
+							type="image/svg+xml"
+							title="ShamTool"
+						>
+							<!-- PNG fallback -->
+							<img class="flex h-8 w-auto" src="{base}/shamtool.png" alt="ShamTool" />
+						</object>
+					</a>
+				</div>
 				<div class="hidden sm:flex sm:ml-6">
 					<div class="flex space-x-4 m-auto">
 						{#each navigation as { name, path }}
 							{#if $page.path === path}
 								<a
-									href={base}{path}
+									href="{base}{path}"
 									class="bg-primary-lighter text-white px-3 py-2 rounded-md text-sm font-medium"
 									aria-current="page">{name}</a
 								>
 							{:else}
 								<a
-									href={base}{path}
+									href="{base}{path}"
 									class="text-gray-300 hover:bg-primary-lighter hover:text-white px-3 py-2 rounded-md text-sm font-medium"
 									>{name}</a
 								>
@@ -91,13 +87,13 @@
 				{#each navigation as { name, path }}
 					{#if $page.path === path}
 						<a
-							href={base}{path}
+							href="{base}{path}"
 							class="bg-primary-lighter text-white block px-3 py-2 rounded-md text-base font-medium"
 							aria-current="page">{name}</a
 						>
 					{:else}
 						<a
-							href={base}{path}
+							href="{base}{path}"
 							class="text-gray-300 hover:bg-primary-lighter hover:text-white block px-3 py-2 rounded-md text-base font-medium"
 							>{name}</a
 						>
