@@ -24,7 +24,7 @@
 <!-- Defines the grid -->
 <div class="mb-10 m-2">
 	<!-- The actual card -->
-	<div class="shadow-lg border-gray-800 bg-gray-100">
+	<div class="shadow-lg rounded overflow-hidden border-gray-800 bg-gray-100">
 		<img class="w-full" src={image} alt="" />
 
 		<!-- allow breaking to the next row -->
@@ -68,8 +68,9 @@
 		</div>
 
 		{#if isExpanded && props}
+            <hr class="w-9/12 m-auto" />
 			<!-- breaking to the next row -->
-			<div class="flex flex-col px-3 pb-3" transition:slide={{ duration: 200 }}>
+			<div class="flex flex-col p-3" transition:slide={{ duration: 200 }}>
 				{#each Object.entries(props) as [name, value]}
 					<!-- disallow breaking for this -->
 					<div class="mt-1 flex items-center">
