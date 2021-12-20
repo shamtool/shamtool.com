@@ -68,7 +68,7 @@
 		</div>
 
 		{#if isExpanded && props}
-			<hr class="w-9/12 m-auto" />
+			<hr class="w-9/12 m-auto border-gray-200" />
 			<!-- breaking to the next row -->
 			<div class="flex flex-col p-3" transition:slide|local={{ duration: 200 }}>
 				{#each Object.entries(props) as [name, value]}
