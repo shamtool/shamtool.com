@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Icon, ChevronDown, ChevronUp } from 'svelte-hero-icons';
-	import MapCardContainer from './MapCardContainer.svelte';
 
 	export let mapCode: string;
 	export let author: string;
@@ -12,6 +11,10 @@
 
 	function onActivate() {
 		isExpanded = !isExpanded;
+		if (!props) {
+			// Fetch once and cache
+			props = fetchProps();
+		}
 	}
 </script>
 
@@ -22,11 +25,8 @@
 	<!-- allow breaking to the next row -->
 	<div class="flex flex-col sm:flex-row sm:flex-wrap pt-3 items-center">
 		<div class="flex-1 desc px-3 text-gray-800">
-			<a
-				href="https://www.youtube.com/watch?v=dvqT-E74Qlo"
-				target="_new"
-				class="title font-bold block cursor-pointer hover:underline">{mapCode}</a
-			>
+			<!-- svelte-ignore a11y-invalid-attribute : TODO -->
+			<a href="#" class="title font-bold block cursor-pointer hover:underline">{mapCode}</a>
 		</div>
 		<div class="flex desc px-3 text-gray-800 text-sm">{author}</div>
 	</div>
@@ -43,6 +43,7 @@
 				>
 			{/each}
 		</div>
+
 		<div class="flex desc text-gray-800">
 			<button
 				type="button"
@@ -60,4 +61,21 @@
 			</button>
 		</div>
 	</div>
+
+	{#if isExpanded && props}
+        <!-- breaking to the next row -->
+		<div class="flex flex-col px-3 pb-3 items-center">
+			{#each Object.entries(props) as [name, value]}
+				<!-- disallow breaking for this -->
+				<div class="mt-1 flex items-center">
+					<div class="flex-1">
+						{name}:
+					</div>
+					<div class="flex text-gray-800 px-3 f-semibold">
+						{value}
+					</div>
+				</div>
+			{/each}
+		</div>
+	{/if}
 </div>

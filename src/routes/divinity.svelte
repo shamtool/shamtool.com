@@ -37,15 +37,16 @@
 			mapCode: '@68656456',
 			author: 'Strawberry#6091',
 			image: 'http://i.imgur.com/wITlW8G.png'
-		},
-
+		}
 	];
 
-	function fetchProps(mapCode:string) {
+	function fetchProps(mapCode: string) {
 		// TODO: tmp
 		return {
-			"Difficulty": 1
-		}
+			Difficulty: 7,
+			Category: 2,
+			Wind: 6.9
+		};
 	}
 </script>
 
