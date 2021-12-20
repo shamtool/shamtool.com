@@ -11,7 +11,8 @@
 </script>
 
 <script>
-	import Container from '$lib/components/Container.svelte';
+	import Alert from '$lib/components/Alert.svelte';
+	import Main from '$lib/components/Main.svelte';
 	import { title } from '$lib/stores';
 	import { onMount } from 'svelte';
 
@@ -24,14 +25,14 @@
 	});
 </script>
 
-<main>
-	<Container>
-		<h1>{status}</h1>
+<Main>
+	<h1>{status}</h1>
 
-		<p>{error.message}</p>
+	<Alert type="error" dismissable={false}>
+		<h5>{error.message}</h5>
 
 		{#if dev && error.stack}
 			<pre>{error.stack}</pre>
 		{/if}
-	</Container>
-</main>
+	</Alert>
+</Main>
