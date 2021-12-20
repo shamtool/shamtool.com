@@ -18,7 +18,6 @@
 
 	export let status;
 	export let error;
-	const dev = process.env.NODE_ENV === 'development';
 
 	onMount(() => {
 		$title = `${status}: ${error.message}`;
@@ -29,9 +28,9 @@
 	<h1>{status}</h1>
 
 	<Alert type="error" dismissable={false}>
-		<h5>{error.message}</h5>
+		<span class="text-xl">{error.message}</span>
 
-		{#if dev && error.stack}
+		{#if error.stack}
 			<pre>{error.stack}</pre>
 		{/if}
 	</Alert>
