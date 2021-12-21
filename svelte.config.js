@@ -1,7 +1,9 @@
-import adapter from '@sveltejs/adapter-static';
+import adapterStatic from '@sveltejs/adapter-static';
+import adapterNode from '@sveltejs/adapter-node';
 import preprocess from 'svelte-preprocess';
 
 const isGhPages = process.env.TO_GITHUB === "true";
+const isForDev = process.env.FOR_DEV === "true";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -14,10 +16,12 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter({
-			pages: isGhPages ? 'build-gh' : 'build',
-			assets: isGhPages ? 'build-gh' : 'build',
+		adapter: !isForDev ? adapterStatic({
+			pages: !isGhPages ? 'build' : 'build-gh',
+			assets: !isGhPages ? 'build' : 'build-gh',
 			fallback: null
+		}) : adapterNode({
+			out: 'build-node',
 		}),
 
 		// hydrate the <div id="svelte"> element in src/app.html
