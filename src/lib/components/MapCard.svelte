@@ -25,23 +25,29 @@
 <!-- Defines the grid -->
 <div class="mb-10 m-2">
     <!-- The actual card -->
-    <div class="shadow-lg rounded overflow-hidden border-gray-800 site-bg-secondary">
-        <img class="w-full" src={image} alt="" />
+    <div class="shadow-lg rounded overflow-hidden border-gray-800 site-bg-secondary hover:shadow-lg hover:shadow-gray-400">
+        <!-- Clickable container -->
+        <div
+            type="link"
+            class="cursor-pointer hover:text-gray-600 dark:hover:text-gray-200"
+            aria-expanded={isExpanded}
+            on:click={onActivate}
+        >
+            <img class="w-full" src={image} alt="" />
+        </div>
 
         <!-- allow breaking to the next row -->
         <div class="flex flex-col sm:flex-row sm:flex-wrap pt-3 items-center">
-            <div class="flex-1 desc px-3">
+            <div class="flex-1 px-3">
                 <!-- svelte-ignore a11y-invalid-attribute : TODO -->
-                <a href="#" class="title font-bold block cursor-pointer hover:underline"
-                    >{mapCode}</a
-                >
+                <span class="font-bold">{mapCode}</span>
             </div>
-            <div class="flex desc px-3 text-sm"><Name801 name={author} /></div>
+            <div class="flex px-3 text-sm"><Name801 name={author} /></div>
         </div>
 
         <!-- disallow breaking for this -->
         <div class="mt-1 flex pt-1 p-3 items-center">
-            <div class="flex-1 desc -m-0.5">
+            <div class="flex-1 -m-0.5">
                 {#each new Array(1) as _, i}
                     <!-- svelte-ignore a11y-invalid-attribute : TODO -->
                     <a
@@ -62,8 +68,7 @@
                 <button
                     type="button"
                     class="inline-flex p-2 rounded-md text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
-                    aria-controls="mobile-menu"
-                    aria-expanded="false"
+                    aria-expanded={isExpanded}
                     on:click={onActivate}
                 >
                     <span class="sr-only">Expand details</span>
@@ -77,7 +82,7 @@
         </div>
 
         {#if isExpanded && props}
-            <hr class="w-9/12 m-auto border-gray-200 dark:border-gray-600" />
+            <hr class="w-9/12 m-auto site-border-subtle" />
             <!-- breaking to the next row -->
             <div class="flex flex-col p-3" transition:slide|local={{ duration: 200 }}>
                 {#each Object.entries(props) as [name, value]}

@@ -94,6 +94,10 @@ spiritual-background: #CA8A04
     @apply text-gray-500 dark:text-gray-400;
 }
 
+.site-border-subtle {
+    @apply border-gray-200 dark:border-gray-600;
+}
+
 /* Fonts */
 html {
     @apply f-regular;
