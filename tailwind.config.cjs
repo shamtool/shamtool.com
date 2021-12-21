@@ -13,6 +13,21 @@ const defaultColors = {
 	...colors
 };
 
+const additionalColors = {
+	brown: {
+		50: '#EFEBE9',
+		100: '#D7CCCB',
+		200: '#BCAAA4',
+		300: '#A1887F',
+		400: '#8D6E63',
+		500: '#795548',
+		600: '#6D4C41',
+		700: '#5D4037',
+		800: '#4E342E',
+		900: '#3E2723',
+	},
+}
+
 /** @type { import('tailwindcss/tailwind-config').TailwindConfig } */
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -20,12 +35,18 @@ const config = {
 	darkMode: 'class',
 
 	theme: {
-		extend: {},
+		extend: {
+			boxShadow: {
+				'border-sm': '0 0 2px 1px rgb(0 0 0 / 0.1)',
+				'border-md': '0 0 8px 1px rgb(0 0 0 / 0.1)',
+			}
+		},
 		container: {
 			center: true,
 		},
 		colors: {
 			...defaultColors,
+			...additionalColors,
 			'primary': '#402A1D',
 			'primary-lighter': '#5A3B29',
 		},

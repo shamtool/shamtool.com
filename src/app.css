@@ -136,3 +136,11 @@ body {
 .f-extrabold {
     font-weight: 800;
 }
+
+/*
+ * TODO: Upstream temporary workaround for heroicons.
+ * see https://github.com/JustinVoitel/svelte-hero-icons/pull/17
+ */
+.heroicon.outline {
+    outline: unset;
+}
