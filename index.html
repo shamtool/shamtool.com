@@ -11,19 +11,19 @@
 
 		
 
-		<link rel="modulepreload" href="/shamtool.com/_app/start-c0f70e84.js">
-		<link rel="modulepreload" href="/shamtool.com/_app/chunks/vendor-54dfe88e.js">
+		<link rel="modulepreload" href="/shamtool.com/_app/start-57d24527.js">
+		<link rel="modulepreload" href="/shamtool.com/_app/chunks/vendor-a8237915.js">
 		<link rel="modulepreload" href="/shamtool.com/_app/chunks/paths-28a87002.js">
-		<link rel="modulepreload" href="/shamtool.com/_app/pages/__layout.svelte-6de76557.js">
-		<link rel="modulepreload" href="/shamtool.com/_app/chunks/Alert-7e90db84.js">
-		<link rel="modulepreload" href="/shamtool.com/_app/chunks/stores-c9c10452.js">
-		<link rel="modulepreload" href="/shamtool.com/_app/pages/index.svelte-e227086e.js">
-		<link rel="modulepreload" href="/shamtool.com/_app/chunks/Main-265d6c27.js">
+		<link rel="modulepreload" href="/shamtool.com/_app/pages/__layout.svelte-c40963dd.js">
+		<link rel="modulepreload" href="/shamtool.com/_app/chunks/Alert-50ba2f2c.js">
+		<link rel="modulepreload" href="/shamtool.com/_app/chunks/stores-be02612f.js">
+		<link rel="modulepreload" href="/shamtool.com/_app/pages/index.svelte-a26b7360.js">
+		<link rel="modulepreload" href="/shamtool.com/_app/chunks/Main-7fc2e05c.js">
 		<link rel="stylesheet" href="/shamtool.com/_app/assets/start-464e9d0a.css">
-		<link rel="stylesheet" href="/shamtool.com/_app/assets/pages/__layout.svelte-411d0a44.css">
+		<link rel="stylesheet" href="/shamtool.com/_app/assets/pages/__layout.svelte-d2672145.css">
 
 		<script type="module">
-			import { start } from "/shamtool.com/_app/start-c0f70e84.js";
+			import { start } from "/shamtool.com/_app/start-57d24527.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"/shamtool.com","assets":""},
@@ -36,8 +36,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/shamtool.com/_app/pages/__layout.svelte-6de76557.js"),
-						import("/shamtool.com/_app/pages/index.svelte-e227086e.js")
+						import("/shamtool.com/_app/pages/__layout.svelte-c40963dd.js"),
+						import("/shamtool.com/_app/pages/index.svelte-a26b7360.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -69,9 +69,17 @@
                 <div class="hidden sm:flex sm:ml-6"><div class="flex space-x-4 m-auto"><a href="/shamtool.com/" class="bg-primary-lighter text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a><a href="/shamtool.com/categories" class="text-gray-300 hover:bg-primary-lighter hover:text-white px-3 py-2 rounded-md text-sm font-medium">Categories</a><a href="/shamtool.com/divinity" class="text-gray-300 hover:bg-primary-lighter hover:text-white px-3 py-2 rounded-md text-sm font-medium">Divinity</a><a href="/shamtool.com/spiritual" class="text-gray-300 hover:bg-primary-lighter hover:text-white px-3 py-2 rounded-md text-sm font-medium">Spiritual</a></div></div></div>
 
             
-            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-3"><button type="button" class="p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"><span class="sr-only">Search</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="heroicon solid h-6 w-6" aria-hidden width="100%" height="100%">
-        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg></button>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-3">
+
+<div class="hidden md:inline-flex"><div class="flex items-center h-8 rounded-lg cursor-text focus-within:shadow-border-md focus-within:shadow-gray-400 bg-brown-700 text-gray-200 overflow-hidden"><input class="search-input min-w-0 max-w-[6rem] w-full focus:max-w-[10rem] flex-1 text-sm pr-2 svelte-ppw3mr" type="text" id="search" autocomplete="off" spellcheck="false" placeholder="Search...">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="heroicon outline flex mr-2 h-5 w-5" aria-hidden width="100%" height="100%">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></div></div>
+
+
+<div class="md:hidden"><button type="button" class="inline-flex items-center justify-center p-2 rounded-full text-gray-400 hover:text-white hover:bg-primary-lighter focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"><span class="sr-only">Search</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="heroicon outline h-6 w-6" aria-hidden width="100%" height="100%">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+</div>
                 <button type="button" class="inline-flex items-center justify-center p-2 rounded-full text-gray-400 hover:text-white hover:bg-primary-lighter focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"><span class="sr-only">Toggle dark mode</span>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="heroicon solid block h-6 w-6" aria-hidden width="100%" height="100%">
         <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg></button></div></div></div>
