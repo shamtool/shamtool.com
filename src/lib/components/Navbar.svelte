@@ -6,6 +6,7 @@
     import { slide } from "svelte/transition";
     import Container from "./Container.svelte";
     import HamburgerButton from "./HamburgerButton.svelte";
+    import DarkModeButton from "./DarkModeButton.svelte";
 
     const navigation = [
         { name: "Home", path: "/" },
@@ -23,11 +24,13 @@
 <nav class="bg-primary" use:clickOutside={() => (isMobileOpen = false)}>
     <Container>
         <div class="relative flex items-center justify-between h-16">
+            <!-- Mobile menu button-->
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                <!-- Mobile menu button-->
                 <HamburgerButton bind:isOpen={isMobileOpen} />
             </div>
+
             <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a
                         href="{base}/"
@@ -46,6 +49,8 @@
                         </object>
                     </a>
                 </div>
+
+                <!-- Desktop menu -->
                 <div class="hidden sm:flex sm:ml-6">
                     <div class="flex space-x-4 m-auto">
                         {#each navigation as { name, path }}
@@ -66,16 +71,19 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Night mode and search button -->
             <div
-                class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+                class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-3"
             >
                 <button
                     type="button"
-                    class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                    class="p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 >
                     <span class="sr-only">Search</span>
                     <Icon src={Search} class="h-6 w-6" solid ariaHidden />
                 </button>
+                <DarkModeButton />
             </div>
         </div>
     </Container>

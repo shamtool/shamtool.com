@@ -1,8 +1,9 @@
-<script>
+<script lang="ts">
     import Alert from "$lib/components/Alert.svelte";
     import Container from "$lib/components/Container.svelte";
     import Navbar from "$lib/components/Navbar.svelte";
-    import { title } from "$lib/stores";
+    import { isDarkMode, title } from "$lib/stores";
+    import { onMount } from "svelte";
     import "../app.css";
 
     let finalTitle = "";
@@ -13,6 +14,25 @@
         }
         finalTitle += "ShamTool";
     }
+
+    // populated on mount
+    let domActions : {
+        setDarkMode: (set:boolean) => void
+    } = null;
+    onMount(() => {
+        domActions = {
+            setDarkMode: (set) => {
+                if (set) {
+                    document.documentElement.classList.add("dark");
+                } else {
+                    document.documentElement.classList.remove("dark");
+                }
+            }
+        }
+    });
+
+    // Listen to dark mode preference
+    $: domActions?.setDarkMode($isDarkMode);
 </script>
 
 <svelte:head>

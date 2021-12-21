@@ -1,6 +1,7 @@
 <script lang="ts">
     import { Icon, ChevronDown, ChevronUp } from "svelte-hero-icons";
     import { slide } from "svelte/transition";
+    import Name801 from "./misc/Name801.svelte";
 
     export let mapCode: string;
     export let author: string;
@@ -24,34 +25,40 @@
 <!-- Defines the grid -->
 <div class="mb-10 m-2">
     <!-- The actual card -->
-    <div class="shadow-lg rounded overflow-hidden border-gray-800 bg-gray-100">
+    <div class="shadow-lg rounded overflow-hidden border-gray-800 site-bg-secondary">
         <img class="w-full" src={image} alt="" />
 
         <!-- allow breaking to the next row -->
         <div class="flex flex-col sm:flex-row sm:flex-wrap pt-3 items-center">
-            <div class="flex-1 desc px-3 text-gray-800">
+            <div class="flex-1 desc px-3">
                 <!-- svelte-ignore a11y-invalid-attribute : TODO -->
                 <a href="#" class="title font-bold block cursor-pointer hover:underline"
                     >{mapCode}</a
                 >
             </div>
-            <div class="flex desc px-3 text-gray-800 text-sm">{author}</div>
+            <div class="flex desc px-3 text-sm"><Name801 name={author} /></div>
         </div>
 
         <!-- disallow breaking for this -->
         <div class="mt-1 flex pt-1 p-3 items-center">
-            <div class="flex-1 desc text-gray-800 -m-0.5">
+            <div class="flex-1 desc -m-0.5">
                 {#each new Array(1) as _, i}
                     <!-- svelte-ignore a11y-invalid-attribute : TODO -->
                     <a
                         href="#"
-                        class="badge inline-flex whitespace-no-wrap m-0.5 bg-indigo-500 text-blue-100 rounded-full px-2 py-0.5 text-xs cursor-pointer text-gray-100"
+                        class="badge inline-flex whitespace-no-wrap m-0.5 bg-indigo-600 rounded-full px-2 py-0.5 text-xs cursor-pointer text-gray-100"
                         >Divinity</a
+                    >
+                    <!-- svelte-ignore a11y-invalid-attribute : TODO -->
+                    <a
+                        href="#"
+                        class="badge inline-flex whitespace-no-wrap m-0.5 bg-yellow-600 rounded-full px-2 py-0.5 text-xs cursor-pointer text-gray-100"
+                        >Spiritual</a
                     >
                 {/each}
             </div>
 
-            <div class="flex desc text-gray-800">
+            <div class="flex desc">
                 <button
                     type="button"
                     class="inline-flex p-2 rounded-md text-gray-400 hover:text-white hover:bg-primary-lighter focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -79,7 +86,7 @@
                         <div class="flex-1">
                             {name}
                         </div>
-                        <div class="flex text-gray-800 px-3 f-semibold">
+                        <div class="flex px-3 f-semibold">
                             {value}
                         </div>
                     </div>

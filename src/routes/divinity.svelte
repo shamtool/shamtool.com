@@ -10,7 +10,7 @@
     const maps = [
         {
             mapCode: "@5344354",
-            author: "Dukeonkled",
+            author: "Slipperyfish",
             image: "https://i.imgur.com/oioYIzH.png",
         },
         {
@@ -20,7 +20,7 @@
         },
         {
             mapCode: "@5344354",
-            author: "Dukeonkled",
+            author: "Slipperyfish",
             image: "https://i.imgur.com/oioYIzH.png",
         },
         {
@@ -30,7 +30,7 @@
         },
         {
             mapCode: "@5344354",
-            author: "Dukeonkled",
+            author: "Slipperyfish",
             image: "https://i.imgur.com/oioYIzH.png",
         },
         {
