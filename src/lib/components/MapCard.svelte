@@ -61,7 +61,7 @@
             <div class="flex desc">
                 <button
                     type="button"
-                    class="inline-flex p-2 rounded-md text-gray-400 hover:text-white hover:bg-primary-lighter focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                    class="inline-flex p-2 rounded-md text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
                     aria-controls="mobile-menu"
                     aria-expanded="false"
                     on:click={onActivate}
@@ -77,7 +77,7 @@
         </div>
 
         {#if isExpanded && props}
-            <hr class="w-9/12 m-auto border-gray-200" />
+            <hr class="w-9/12 m-auto border-gray-200 dark:border-gray-600" />
             <!-- breaking to the next row -->
             <div class="flex flex-col p-3" transition:slide|local={{ duration: 200 }}>
                 {#each Object.entries(props) as [name, value]}
