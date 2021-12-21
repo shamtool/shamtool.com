@@ -1,5 +1,5 @@
 <script>
-	import Container from './Container.svelte';
+    import Container from "./Container.svelte";
 </script>
 
 <!--
@@ -7,7 +7,7 @@
 Sets the main content of a page enclosed in a container.
   -->
 <main>
-	<Container>
-		<slot />
-	</Container>
+    <Container>
+        <slot />
+    </Container>
 </main>

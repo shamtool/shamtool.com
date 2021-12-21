@@ -6,11 +6,11 @@ publish(
     {
         branch: 'gh-pages',
         repo: process.env.GIT_REPO,
-        dotfiles: true
+        dotfiles: true,
     },
     (err) => {
         if (err) {
-            console.error("got error:", err);
+            console.error('got error:', err);
             process.exit(1);
         }
         console.log('Deploy Complete!');
