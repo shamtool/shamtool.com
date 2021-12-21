@@ -19,8 +19,11 @@
         }
     }
 
+    const mapCodeElId = "mapCode_" + ((Math.random() * 1000000) << 0).toString();
+    const authorElId = "author_" + ((Math.random() * 1000000) << 0).toString();
     let mapCodeDivEl: HTMLDivElement;
     let authorDivEl: HTMLDivElement;
+
     function onMapCodeAuthorCopy(event: ClipboardEvent) {
         const sel = document.getSelection();
         console.log(sel);
@@ -28,8 +31,11 @@
         // Only format when both elements are selected in partial (at least)
         if (!sel.containsNode(mapCodeDivEl, true) || !sel.containsNode(authorDivEl, true)) return;
 
-        // TODO: Do we have a bulletproof solution to determine the selection?
-        const [selectedMapCode, selectedAuthor] = sel.toString().split(/\s+/);
+        const fragment = sel.getRangeAt(0).cloneContents();
+
+        const selectedMapCode = fragment.getElementById(mapCodeElId).textContent;
+        const selectedAuthor = fragment.getElementById(authorElId).textContent;
+
         event.clipboardData.setData("text", `${selectedAuthor} - ${selectedMapCode}`);
         event.preventDefault();
     }
@@ -59,10 +65,12 @@
             class="flex flex-col sm:flex-row sm:flex-wrap pt-3 items-center"
             on:copy={onMapCodeAuthorCopy}
         >
-            <div class="flex-1 px-3" bind:this={mapCodeDivEl}>
+            <div class="flex-1 px-3" bind:this={mapCodeDivEl} id={mapCodeElId}>
                 <span class="font-bold">{mapCode}</span>
             </div>
-            <div class="flex px-3 text-sm" bind:this={authorDivEl}><Name801 name={author} /></div>
+            <div class="flex px-3 text-sm" bind:this={authorDivEl} id={authorElId}>
+                <Name801 name={author} />
+            </div>
         </div>
 
         <!-- disallow breaking for this -->
