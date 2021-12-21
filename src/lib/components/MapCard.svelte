@@ -25,7 +25,9 @@
 <!-- Defines the grid -->
 <div class="mb-10 m-2">
     <!-- The actual card -->
-    <div class="shadow-lg rounded overflow-hidden border-gray-800 site-bg-secondary hover:shadow-lg hover:shadow-gray-400">
+    <div
+        class="shadow-lg rounded overflow-hidden border-gray-800 site-bg-secondary hover:shadow-lg hover:shadow-gray-400"
+    >
         <!-- Clickable container -->
         <div
             type="link"
@@ -37,9 +39,15 @@
         </div>
 
         <!-- allow breaking to the next row -->
-        <div class="flex flex-col sm:flex-row sm:flex-wrap pt-3 items-center">
+        <!-- Intercept copy and set formatted content in the clipboard -->
+        <div
+            class="flex flex-col sm:flex-row sm:flex-wrap pt-3 items-center"
+            on:copy={(event) => {
+                event.clipboardData.setData("text", `${author} - ${mapCode}`);
+                event.preventDefault();
+            }}
+        >
             <div class="flex-1 px-3">
-                <!-- svelte-ignore a11y-invalid-attribute : TODO -->
                 <span class="font-bold">{mapCode}</span>
             </div>
             <div class="flex px-3 text-sm"><Name801 name={author} /></div>
