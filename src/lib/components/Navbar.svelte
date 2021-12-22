@@ -74,7 +74,7 @@
 
             <!-- Night mode and search button -->
             <div
-                class="flex flex-1 items-center pr-2 sm:ml-6 sm:pr-0 space-x-3"
+                class="absolute inset-y-0 right-0 flex flex-1 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-3"
             >
                 <!-- This is a free space -->
                 <div class="ml-auto"></div>
