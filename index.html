@@ -11,19 +11,19 @@
 
 		
 
-		<link rel="modulepreload" href="/shamtool.com/_app/start-91acc3c0.js">
-		<link rel="modulepreload" href="/shamtool.com/_app/chunks/vendor-a8237915.js">
+		<link rel="modulepreload" href="/shamtool.com/_app/start-b844a4b6.js">
+		<link rel="modulepreload" href="/shamtool.com/_app/chunks/vendor-eb002fdf.js">
 		<link rel="modulepreload" href="/shamtool.com/_app/chunks/paths-28a87002.js">
-		<link rel="modulepreload" href="/shamtool.com/_app/pages/__layout.svelte-c40963dd.js">
-		<link rel="modulepreload" href="/shamtool.com/_app/chunks/Alert-50ba2f2c.js">
-		<link rel="modulepreload" href="/shamtool.com/_app/chunks/stores-be02612f.js">
-		<link rel="modulepreload" href="/shamtool.com/_app/pages/index.svelte-a26b7360.js">
-		<link rel="modulepreload" href="/shamtool.com/_app/chunks/Main-7fc2e05c.js">
+		<link rel="modulepreload" href="/shamtool.com/_app/pages/__layout.svelte-d1bae843.js">
+		<link rel="modulepreload" href="/shamtool.com/_app/chunks/Alert-95f67fac.js">
+		<link rel="modulepreload" href="/shamtool.com/_app/chunks/stores-b8fdc8b1.js">
+		<link rel="modulepreload" href="/shamtool.com/_app/pages/index.svelte-b0151405.js">
+		<link rel="modulepreload" href="/shamtool.com/_app/chunks/Main-06b75fe0.js">
 		<link rel="stylesheet" href="/shamtool.com/_app/assets/start-464e9d0a.css">
-		<link rel="stylesheet" href="/shamtool.com/_app/assets/pages/__layout.svelte-d2672145.css">
+		<link rel="stylesheet" href="/shamtool.com/_app/assets/pages/__layout.svelte-3bddf1c6.css">
 
 		<script type="module">
-			import { start } from "/shamtool.com/_app/start-91acc3c0.js";
+			import { start } from "/shamtool.com/_app/start-b844a4b6.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"/shamtool.com","assets":""},
@@ -36,8 +36,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/shamtool.com/_app/pages/__layout.svelte-c40963dd.js"),
-						import("/shamtool.com/_app/pages/index.svelte-a26b7360.js")
+						import("/shamtool.com/_app/pages/__layout.svelte-d1bae843.js"),
+						import("/shamtool.com/_app/pages/index.svelte-b0151405.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -69,11 +69,13 @@
                 <div class="hidden sm:flex sm:ml-6"><div class="flex space-x-4 m-auto"><a href="/shamtool.com/" class="bg-primary-lighter text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a><a href="/shamtool.com/categories" class="text-gray-300 hover:bg-primary-lighter hover:text-white px-3 py-2 rounded-md text-sm font-medium">Categories</a><a href="/shamtool.com/divinity" class="text-gray-300 hover:bg-primary-lighter hover:text-white px-3 py-2 rounded-md text-sm font-medium">Divinity</a><a href="/shamtool.com/spiritual" class="text-gray-300 hover:bg-primary-lighter hover:text-white px-3 py-2 rounded-md text-sm font-medium">Spiritual</a></div></div></div>
 
             
-            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-3">
-
-<div class="hidden md:inline-flex"><div class="flex items-center h-8 rounded-lg cursor-text focus-within:shadow-border-md focus-within:shadow-gray-400 bg-brown-700 text-gray-200 overflow-hidden"><input class="search-input min-w-0 max-w-[6rem] w-full focus:max-w-[10rem] flex-1 text-sm pr-2 svelte-ppw3mr" type="text" id="search" autocomplete="off" spellcheck="false" placeholder="Search...">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="heroicon outline flex mr-2 h-5 w-5" aria-hidden width="100%" height="100%">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></div></div>
+            <div class="absolute inset-y-0 right-0 flex flex-1 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-3">
+                <div class="ml-auto"></div>
+                
+<div class="hidden md:flex relative max-w-[8rem] w-full duration-75 focus-within:max-w-[16rem]"><div class="flex flex-1 items-center h-8 rounded-lg cursor-text focus-within:shadow-border-md focus-within:shadow-gray-400 bg-brown-700 text-gray-200 overflow-hidden"><input class="search-input transition-all w-full text-sm pr-2 svelte-ppw3mr" type="text" id="search" autocomplete="off" spellcheck="false" placeholder="Search...">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="heroicon outline mr-2 h-5 w-5" aria-hidden width="100%" height="100%">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></div>
+    </div>
 
 
 <div class="md:hidden"><button type="button" class="inline-flex items-center justify-center p-2 rounded-full text-gray-400 hover:text-white hover:bg-primary-lighter focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"><span class="sr-only">Search</span>
@@ -98,7 +100,9 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button></div></div></div></div>
 
 <div class="pt-5">
-<main><div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8"><h3 class="text-center">Welcome to ShamTool</h3></div></main></div>
+<main><div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8"><h3 class="text-center">Welcome to ShamTool</h3>
+    <p class="text-center">Have a cookie!
+        <img class="mt-6 m-auto animate-spin h-auto max-h-36" src="/shamtool.com/le-cookie.svg" alt="Le cookie"></p></div></main></div>
 
 <footer></footer>
 
