@@ -47,7 +47,7 @@
 <div class="mb-10 m-2">
     <!-- The actual card -->
     <div
-        class="shadow-lg rounded overflow-hidden border-gray-800 site-bg-secondary hover:shadow-lg hover:shadow-gray-400"
+        class="shadow-lg rounded overflow-hidden border-gray-800 site-bg-secondary hover:shadow-border-md hover:shadow-gray-400 transition hover:-translate-y-0.5"
     >
         <!-- Clickable container -->
         <div
@@ -115,7 +115,7 @@
             <div class="flex flex-col p-3" transition:slide|local={{ duration: 200 }}>
                 {#each Object.entries(props) as [name, value]}
                     <!-- disallow breaking for this -->
-                    <div class="mt-1 flex items-center">
+                    <div class="mt-1 flex items-center text-sm">
                         <div class="flex-1">
                             {name}
                         </div>

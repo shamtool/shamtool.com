@@ -4,6 +4,10 @@
     let searchDivElement: HTMLDivElement;
     let inputElement: HTMLInputElement;
     let isInputFocused = false;
+
+    $: if (isInputFocused) {
+        searchDivElement
+    }
 </script>
 
 <!-- Search bar -->
@@ -18,7 +22,7 @@
             bind:this={inputElement}
             on:focus={() => { isInputFocused = true }}
             on:blur={() => { isInputFocused = false }}
-            class="search-input min-w-0 max-w-[6rem] w-full focus:max-w-[10rem] flex-1 text-sm pr-2"
+            class="search-input min-w-0 max-w-[6rem] w-full transition-all duration-75 focus:max-w-[10rem] flex-1 text-sm pr-2"
             type="text"
             id="search"
             autocomplete="off"
