@@ -10,17 +10,17 @@
 </script>
 
 <!-- Search bar -->
-<div class="hidden md:inline-flex relative">
+<div class="hidden md:flex relative max-w-[8rem] w-full duration-75 focus-within:max-w-[16rem]">
     <div
         on:click={() => inputElement.focus()}
-        class="flex items-center h-8 rounded-lg cursor-text focus-within:shadow-border-md focus-within:shadow-gray-400 bg-brown-700 text-gray-200 overflow-hidden"
+        class="flex flex-1 items-center h-8 rounded-lg cursor-text focus-within:shadow-border-md focus-within:shadow-gray-400 bg-brown-700 text-gray-200 overflow-hidden"
     >
         <input
             bind:this={inputElement}
             bind:value={searchQuery}
             on:focus={() => (isFocused = true)}
             on:blur={() => (isFocused = false)}
-            class="search-input min-w-0 max-w-[6rem] w-full transition-all duration-75 focus:max-w-[10rem] text-sm pr-2"
+            class="search-input transition-all w-full text-sm pr-2"
             type="text"
             id="search"
             autocomplete="off"
