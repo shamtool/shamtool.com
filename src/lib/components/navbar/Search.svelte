@@ -1,36 +1,37 @@
 <script lang="ts">
     import { Icon, Search } from "svelte-hero-icons";
+    import SearchResult from "./SearchResult.svelte";
 
-    let searchDivElement: HTMLDivElement;
     let inputElement: HTMLInputElement;
-    let isInputFocused = false;
+    let isFocused: boolean;
+    let searchQuery: string;
 
-    $: if (isInputFocused) {
-        searchDivElement
-    }
+    function onInput() {}
 </script>
 
 <!-- Search bar -->
-<!-- TODO: add a shadow h-->
-<div class="hidden md:inline-flex">
+<div class="hidden md:inline-flex relative">
     <div
-        bind:this={searchDivElement}
         on:click={() => inputElement.focus()}
         class="flex items-center h-8 rounded-lg cursor-text focus-within:shadow-border-md focus-within:shadow-gray-400 bg-brown-700 text-gray-200 overflow-hidden"
     >
         <input
             bind:this={inputElement}
-            on:focus={() => { isInputFocused = true }}
-            on:blur={() => { isInputFocused = false }}
-            class="search-input min-w-0 max-w-[6rem] w-full transition-all duration-75 focus:max-w-[10rem] flex-1 text-sm pr-2"
+            bind:value={searchQuery}
+            on:focus={() => (isFocused = true)}
+            on:blur={() => (isFocused = false)}
+            class="search-input min-w-0 max-w-[6rem] w-full transition-all duration-75 focus:max-w-[10rem] text-sm pr-2"
             type="text"
             id="search"
             autocomplete="off"
             spellcheck="false"
             placeholder="Search..."
         />
-        <Icon src={Search} class="flex mr-2 h-5 w-5" ariaHidden />
+        <Icon src={Search} class="mr-2 h-5 w-5" ariaHidden />
     </div>
+    {#if searchQuery && isFocused}
+        <div class="absolute top-full mts-2 w-full"><SearchResult bind:query={searchQuery} /></div>
+    {/if}
 </div>
 
 <!-- Search button for smaller widths -->
@@ -44,7 +45,7 @@
     </button>
 </div>
 
-<style>
+<style lang="postcss">
     /* Strip off all styles */
     .search-input,
     .search-input:focus {
@@ -58,5 +59,4 @@
     .search-input::placeholder {
         @apply text-gray-400;
     }
-
 </style>
