@@ -50,6 +50,7 @@
     <Alert>
         Keep your eyes peeled for something big! This site uses <a
             class="link"
+            target="_blank"
             href="https://svelte.dev">Svelte</a
         > under the hood to bring you this content seamlessly.
     </Alert>
