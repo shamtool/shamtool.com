@@ -2,13 +2,14 @@
     import { Icon } from "@steeze-ui/svelte-icon";
     import { Search } from "@steeze-ui/heroicons";
     import { clickOutside } from "svelte-use-click-outside";
-    import SearchResult from "./SearchResult.svelte";
+    import SearchResultBox from "./searchResults/Box.svelte";
 
     let inputElement: HTMLInputElement;
+    let searchResultComponent: SearchResultBox;
     let isFocused: boolean;
     let searchQuery: string;
 
-    let forcedShow = "hidden";
+    let forcedShow: "flex" | "hidden";
     $: forcedShow = isFocused ? "flex" : "hidden";
 </script>
 
@@ -36,7 +37,11 @@
         <Icon src={Search} class="mr-2 h-5 w-5" ariaHidden />
     </div>
     {#if searchQuery && isFocused}
-        <div class="absolute top-full mts-2 w-full"><SearchResult bind:query={searchQuery} /></div>
+        <div class="absolute top-full mts-2 w-full">
+            {#key isFocused}
+                <SearchResultBox bind:this={searchResultComponent} bind:query={searchQuery} />
+            {/key}
+        </div>
     {/if}
 </div>
 
