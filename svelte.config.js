@@ -27,18 +27,6 @@ const config = {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
 
-		vite: {
-			ssr: {
-				// !IMPORTANT so the icon data can be imported (as JSON)
-				noExternal: ["svelte-hero-icons"],
-			},
-
-			// no import waterfalls in development
-			optimizeDeps: {
-				include: ["svelte-hero-icons"],
-			},
-		},
-
 		paths: {
 			// Deployment to GH-pages
 			base: isGhPages ? '/shamtool.com' : '',

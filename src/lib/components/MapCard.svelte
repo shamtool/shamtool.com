@@ -1,5 +1,6 @@
 <script lang="ts">
-    import { Icon, ChevronDown, ChevronUp } from "svelte-hero-icons";
+    import { ChevronDown, ChevronUp } from "@steeze-ui/heroicons";
+    import { Icon } from "@steeze-ui/svelte-icon";
     import { slide } from "svelte/transition";
     import Name801 from "./misc/Name801.svelte";
 

@@ -1,6 +1,7 @@
 <script lang="ts">
+    import { Menu, X } from "@steeze-ui/heroicons";
+    import { Icon } from "@steeze-ui/svelte-icon";
     import { createEventDispatcher } from "svelte";
-    import { Icon, Menu, X } from "svelte-hero-icons";
 
     const dispatch = createEventDispatcher();
 

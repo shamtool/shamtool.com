@@ -1,5 +1,6 @@
 <script lang="ts">
-    import { Icon, Search } from "svelte-hero-icons";
+    import { Icon } from "@steeze-ui/svelte-icon";
+    import { Search } from "@steeze-ui/heroicons";
     import { clickOutside } from "svelte-use-click-outside";
     import SearchResult from "./SearchResult.svelte";
 

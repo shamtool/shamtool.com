@@ -1,6 +1,7 @@
 <script lang="ts">
+    import { Ban, CheckCircle, Exclamation, InformationCircle, X } from "@steeze-ui/heroicons";
+    import { Icon } from "@steeze-ui/svelte-icon";
     import { createEventDispatcher } from "svelte";
-    import { Ban, CheckCircle, Exclamation, Icon, InformationCircle, X } from "svelte-hero-icons";
 
     /**
      * Whether the alert is dismissable.
