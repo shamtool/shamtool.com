@@ -11,7 +11,7 @@ RUN pnpm install --frozen-lockfile
 ARG VITE_API_HOST
 ENV VITE_API_HOST=${VITE_API_HOST}
 
-RUN pnpm run build:dev
+RUN pnpm run build
 RUN pnpm prune --production
 
 FROM node:16-alpine as runner
