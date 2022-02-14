@@ -4,6 +4,7 @@ services:
   frontend:
     networks:
       - frontend
+    restart: always
     build:
       context: ./
       args:
