@@ -24,9 +24,6 @@ const config = {
 			out: 'build',
 		}),
 
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte',
-
 		paths: {
 			// Deployment to GH-pages
 			base: isGhPages ? '/shamtool.com' : '',

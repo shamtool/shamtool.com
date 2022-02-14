@@ -54,7 +54,7 @@
                 <div class="hidden sm:flex sm:ml-6">
                     <div class="flex space-x-4 m-auto">
                         {#each navigation as { name, path }}
-                            {#if $page.path === path}
+                            {#if $page.url.pathname === path}
                                 <a
                                     href="{base}{path}"
                                     class="bg-primary-lighter text-white px-3 py-2 rounded-md text-sm font-medium"
