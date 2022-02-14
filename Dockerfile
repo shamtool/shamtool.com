@@ -1,4 +1,4 @@
-FROM node:16-alpine as builder
+FROM node:16-bullseye-slim as builder
 
 RUN npm install -g pnpm
 
@@ -14,7 +14,7 @@ ENV VITE_API_HOST=${VITE_API_HOST}
 RUN pnpm run build
 RUN pnpm prune --production
 
-FROM node:16-alpine as runner
+FROM node:16-bullseye-slim as runner
 ENV NODE_ENV production
 
 # Copy necessary build ouputs
