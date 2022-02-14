@@ -4,7 +4,7 @@
     "scripts": {
         "dev": "svelte-kit dev",
         "build": "svelte-kit build",
-        "build:dev": "cross-env FOR_DEV=true svelte-kit build",
+        "build:static": "cross-env IS_STATIC=true svelte-kit build",
         "build:gh": "cross-env TO_GITHUB=true svelte-kit build",
         "package": "svelte-kit package",
         "preview": "svelte-kit preview",
