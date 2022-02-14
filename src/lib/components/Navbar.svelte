@@ -89,7 +89,7 @@
         <div class="sm:hidden" id="mobile-menu" transition:slide>
             <div class="px-2 pt-2 pb-3 space-y-1">
                 {#each navigation as { name, path }}
-                    {#if $page.path === path}
+                    {#if $page.url.pathname === path}
                         <a
                             href="{base}{path}"
                             class="bg-primary-lighter text-white block px-3 py-2 rounded-md text-base font-medium"
