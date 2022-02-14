@@ -1,17 +1,6 @@
 version: "3"
 
 services:
-  nginx:
-    build: ./nginx
-    depends_on:
-      - frontend
-    ports:
-      - 80:80
-      - 443:443
-    restart: always
-    volumes:
-      - certbot-data:/certbot-data/:ro
-
   frontend:
     ports:
       - 3000:3000
@@ -19,8 +8,3 @@ services:
       context: ./
       args:
         VITE_API_HOST: api.shamtool.com
-
-# External data with SSL cert
-volumes:
-  certbot-data:
-    external: true
