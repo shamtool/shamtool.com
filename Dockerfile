@@ -2,10 +2,15 @@ FROM node:16-bullseye-slim as builder
 
 RUN npm install -g pnpm
 
-COPY . ./usr/app
 WORKDIR /usr/app
 
-RUN pnpm install --frozen-lockfile
+# Store or use cache in virtual store if no deps have changed
+COPY pnpm-lock.yaml ./
+RUN pnpm fetch
+
+COPY . ./
+
+RUN pnpm install --offline --frozen-lockfile
 
 # Export API host path to build
 ARG VITE_API_HOST
