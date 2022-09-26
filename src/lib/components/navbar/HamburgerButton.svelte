@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Menu, X } from "@steeze-ui/heroicons";
+    import { Bars3, XMark } from "@steeze-ui/heroicons";
     import { Icon } from "@steeze-ui/svelte-icon";
     import { createEventDispatcher } from "svelte";
 
@@ -21,8 +21,8 @@
     on:click={onActivate}
 >
     <span class="sr-only">Open main menu</span>
-    <Icon src={Menu} class="block h-6 w-6" solid ariaHidden />
+    <Icon src={Bars3} class="block h-6 w-6" solid ariaHidden />
     {#if isOpen}
-        <Icon src={X} class="block h-4 w-4" solid ariaHidden />
+        <Icon src={XMark} class="block h-4 w-4" solid ariaHidden />
     {/if}
 </button>

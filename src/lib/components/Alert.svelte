@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Ban, CheckCircle, Exclamation, InformationCircle, X } from "@steeze-ui/heroicons";
+    import { CheckCircle, ExclamationTriangle, InformationCircle, NoSymbol, XMark } from "@steeze-ui/heroicons";
     import { Icon } from "@steeze-ui/svelte-icon";
     import { createEventDispatcher } from "svelte";
 
@@ -33,12 +33,12 @@
             text: "text-green-900",
         },
         warn: {
-            icon: Exclamation,
+            icon: ExclamationTriangle,
             bg: "bg-yellow-50",
             text: "text-yellow-900",
         },
         error: {
-            icon: Ban,
+            icon: NoSymbol,
             bg: "bg-red-50",
             text: "text-red-900",
         },
@@ -71,7 +71,7 @@
             {#if dismissable}
                 <div>
                     <button type="button" aria-label="Close" on:click={onDismiss}>
-                        <Icon src={X} class="h-4 w-4 {types[type].text}" ariaHidden />
+                        <Icon src={XMark} class="h-4 w-4 {types[type].text}" ariaHidden />
                     </button>
                 </div>
             {/if}

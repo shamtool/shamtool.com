@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Icon } from "@steeze-ui/svelte-icon";
-    import { Search } from "@steeze-ui/heroicons";
+    import { MagnifyingGlass } from "@steeze-ui/heroicons";
     import { clickOutside } from "svelte-use-click-outside";
     import SearchResultBox from "./searchResults/Box.svelte";
 
@@ -34,7 +34,7 @@
             spellcheck="false"
             placeholder="Search..."
         />
-        <Icon src={Search} class="mr-2 h-5 w-5" ariaHidden />
+        <Icon src={MagnifyingGlass} class="mr-2 h-5 w-5" ariaHidden />
     </div>
     {#if searchQuery && isFocused}
         <div class="absolute top-full mts-2 w-full">
@@ -53,7 +53,7 @@
         class="inline-flex items-center justify-center p-2 rounded-full text-gray-400 hover:text-white hover:bg-primary-lighter focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
     >
         <span class="sr-only">Search</span>
-        <Icon src={Search} class="h-6 w-6" ariaHidden />
+        <Icon src={MagnifyingGlass} class="h-6 w-6" ariaHidden />
     </button>
 </div>
 
